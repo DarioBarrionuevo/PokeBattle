@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* @font-face {
+  font-family: Pokemon solid;
+  src: url(../img/PokemonSolid.ttf);
+} */
+
+html {
+  /* IMAGEN DE FONDO DE BATALLA */
+  background: url("../img/vs.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  /* font-family: Pokemon solid; */
+}
+
+BODY {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    " fotosPlayer1 fotosPlayer1 cabecera fotosPlayer2 fotosPlayer2 "
+    "cardPlayer1 player1 log player2 cardPlayer2"
+    ". player1 pelea player2 ."
+    ". . . . ."
+    ". footer footer footer .";
+}
+
+/* ESTILOS LOG DE PELEA */
+#logPelea {
+  grid-area: log;
+  height: 100%;
+  display: none;
+  /* color: white; */
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 0.2px black;
+  /*para conseguir letras blancas con borde negro*/
+  background-color: hsl(0, 0%, 0%, 0.4);
+  font-size: 1.1rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  /* border: black 2px solid; */
+  /* background-color: bisque; */
+  overflow-y: auto;
+}
+
+#logPelea>p {
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+/* ESTILOS BOTON PELEAR DE NUEVO */
+#botonPelearDeNuevo {
+  order: 1;
+  background-color: green;
+  border: black 1px solid;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  width: 80%;
+  margin: 5px;
+}
+
+#botonPelearDeNuevo:hover {
+  background-color: rgb(104, 233, 104);
+}
+
+/* ESTILOS CABECERA Y FOOTER */
+#cabecera {
+  grid-area: cabecera;
+  margin: 10px;
+}
+
+#fotosPersonajes1 {
+  grid-area: fotosPlayer1;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+#fotosPersonajes2 {
+  grid-area: fotosPlayer2;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+h2 {
+  color: white;
+  margin: 10px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#fotosEscenarios {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fotoPersonaje {
+  width: 80px;
+  height: 80px;
+  border: white 1px solid;
+  /* background-color: white; */
+  padding: 5px;
+  border-radius: 10px;
+  cursor: url("../img/pokeball2.png"), auto;
+}
+
+#footer {
+  grid-area: footer;
+  text-align: center;
+  color: ivory;
+  margin: 5px;
+}
+
+/* ESTILOS PLAYER 1 Y PLAYER 2 */
+
+#player1 {
+  grid-area: player1;
+  display: flex;
+  align-items: center;
+}
+
+#fotoPlayer1 {
+  opacity: 0;
+}
+
+#fotoPlayer2 {
+  opacity: 0;
+}
+
+#player2 {
+  grid-area: player2;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.movimiento {
+  width: 80%;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 15px);
+  }
+
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+/* ESTILOS CARACTERISTICAS PLAYER 1 Y PLAYER2 */
+
+.caracteristicas1 {
+  grid-area: cardPlayer1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.caracteristicas2 {
+  grid-area: cardPlayer2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+#estadisticasPlayer1 {
+  background: #f12711;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f5af19, #f12711);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 70%;
+  height: 90%;
+  border: black 3px solid;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#estadisticasPlayer1>p {
+  margin-top: 5px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#estadisticasPlayer1>p>img {
+  width: 30px;
+  height: 30px;
+}
+
+#estadisticasPlayer2 {
+  background: #00b4db;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0083b0, #00b4db);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083b0, #00b4db);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 70%;
+  height: 90%;
+  border: black 3px solid;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#estadisticasPlayer2>p {
+  margin-top: 5px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+#estadisticasPlayer2>p>img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ESTILOS BOTON DE PELEA */
+
+#centro {
+  grid-area: pelea;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  /* opacity: 0; */
+}
+
+#botonPelea {
+  width: 200px;
+  margin: 30px;
+  cursor: grabbing;
+}
+
+#centro:hover #botonPelea {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+/* .rotaImagen {
+    transform: rotateY(180deg);
+
+}
+
+
+.cambiaCursorPokeball {
+    cursor: url("../img/pokeball2.png"),
+        auto;
+}
+
+*/
+/*CLASE PARA QUE LA IMAGEN FLOTE
+ .movimiento {
+    width: 50%;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+
+    65% {
+        transform: translate(0, 15px);
+    }
+
+    to {
+        transform: translate(0, -0px);
+    }
+} */

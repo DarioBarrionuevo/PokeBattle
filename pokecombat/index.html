@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POKEMON BATTLE</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body id="cuerpo">
+  <div id="cabecera">
+    <h2>ELIGE TU POKEMON</h2>
+  </div>
+  <div id="fotosPersonajes1">
+    <figure>
+      <img onclick="player1Cambio(gloom)" class="fotoPersonaje" src="img/gloom.png" alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        GLOOM
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player1Cambio(ninetales)" class="fotoPersonaje" src="img/ninetales.png"
+        alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        NINETALES
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player1Cambio(seahorse)" class="fotoPersonaje" src="img/seahorse.png"
+        alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        SEAHORSE
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player1Cambio(talonflame)" class="fotoPersonaje" src="img/talonflame.png"
+        alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        TALONFLAME
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player1Cambio(eevee)" class="fotoPersonaje" src="img/eevee.png" alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        EEVEE
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player1Cambio(draco)" class="fotoPersonaje" src="img/draco.png" alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        DRACO
+      </figcaption>
+    </figure>
+  </div>
+
+  <div id="logPelea">
+    <input id="botonPelearDeNuevo" type="button" value="PELEA DE NUEVO" onclick="location.reload()" />
+  </div>
+
+  <div id="fotosPersonajes2">
+    <figure>
+      <img onclick="player2Cambio(gloom)" class="fotoPersonaje" src="img/gloom.png" alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        GLOOM
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player2Cambio(ninetales)" class="fotoPersonaje" src="img/ninetales.png"
+        alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        NINETALES
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player2Cambio(seahorse)" class="fotoPersonaje" src="img/seahorse.png"
+        alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        SEAHORSE
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player2Cambio(talonflame)" class="fotoPersonaje" src="img/talonflame.png"
+        alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        TALONFLAME
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player2Cambio(eevee)" class="fotoPersonaje" src="img/eevee.png" alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        EEVEE
+      </figcaption>
+    </figure>
+    <figure>
+      <img onclick="player2Cambio(draco)" class="fotoPersonaje" src="img/draco.png" alt="El pokemon esta sobando" />
+      <figcaption style="text-align: center; color: aliceblue;">
+        DRACO
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="caracteristicas1"></div>
+
+  <div id="player1">
+    <img class="movimiento" id="fotoPlayer1" src="" alt="" />
+  </div>
+
+  <div id="centro">
+    <img onclick="empiezaPelea()" id="botonPelea" src="img/fight.png" alt="DALE AL MONO QUE ES DE GOMA" />
+  </div>
+
+  <div class="caracteristicas2"></div>
+
+  <div id="player2">
+    <img class="movimiento" id="fotoPlayer2" src="" alt="" />
+  </div>
+
+  <div id="footer">
+    <div id="fotosEscenarios">
+      <img onclick="cambiarFondo(fotoFondo1)" class="fotoPersonaje" src="img/fondoBatallaPokemon1.jpg"
+        alt="El pokemon esta sobando" />
+      <img onclick="cambiarFondo(fotoFondo2)" class="fotoPersonaje" src="img/fondoBatallaPokemon2.jpg"
+        alt="El pokemon esta sobando" />
+      <img onclick="cambiarFondo(fotoFondo3)" class="fotoPersonaje" src="img/fondoBatallaPokemon3.jpg"
+        alt="El pokemon esta sobando" />
+      <img onclick="cambiarFondo(fotoFondo4)" class="fotoPersonaje" src="img/fondoBatallaPokemon4.jpg"
+        alt="El pokemon esta sobando" />
+    </div>
+    <h2>ELIGE TU ESCENARIO</h2>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
